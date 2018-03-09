@@ -1,0 +1,65 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "filter.eventlog",
+        "designer|userClassName": "filter.eventlogViewController"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "091edd5b-da62-4456-964e-a54aab0802f4",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "component",
+                    "key"
+                ],
+                "fn": "createComboStore",
+                "implHandler": [
+                    " var ds = Ext.create(\"Ext.data.Store\", {",
+                    "     proxy: {",
+                    "         url: '/opmon/seagull/www/index.php/statusgrid/action/comboContent/filter/' + key,",
+                    "         type: 'ajax',",
+                    "         autoload: true,",
+                    "         noCache: false,",
+                    "         actionMethods: {",
+                    "             read: 'POST'",
+                    "        },",
+                    "        reader: {",
+                    "            rootProperty: 'data',",
+                    "            totalProperty: 'total',",
+                    "            id: 'id'",
+                    "        }",
+                    "    },",
+                    "    fields: [",
+                    "        {name: 'id', mapping: 'id'},",
+                    "        {name: 'display_name', mapping: 'display_name'}",
+                    "    ]",
+                    "});",
+                    "",
+                    "component.setStore(ds);"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "createComboStore",
+            "designerId": "86c8bd46-a58c-4aee-9d41-7941e1c3b50b"
+        }
+    ]
+}

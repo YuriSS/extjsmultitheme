@@ -1,0 +1,167 @@
+{
+   "name": "EventLog",
+   "namespace": "EventLog",
+   "version": "1.0.0.0",
+   "framework": "ext",
+   "toolkit": "classic",
+   "theme": "theme-triton",
+   "requires": [
+      "font-awesome",
+      "ext-locale",
+      "optools",
+      "optranslate",
+      "daterangerpicker"
+   ],
+   "builds": {
+      "opmon-default": {
+        "toolkit": "classic",
+        "theme": "opmon-default",
+        "locales": ["en", "pt"]
+      },
+      "opmon-red": {
+        "toolkit": "classic",
+        "theme": "opmon-black",
+        "locales": ["en", "pt"]
+      }
+   },
+   "indexHtmlPath": "index.html",
+   "classpath": "${app.dir}/app,${app.dir}/resources/",
+   "overrides": [
+      "overrides",
+        "${toolkit.name}/overrides",
+        "${app.dir}/locale/${app.locale}",
+        "${app.dir}/${toolkit.name}/overrides",
+        "${app.dir}/${toolkit.name}/locale/${app.locale}"
+   ],
+   "fashion": {
+      "missingParameters": "error",
+      "inliner": {
+         "enable": false
+      }
+   },
+   "sass": {
+      "namespace": "EventLog",
+      "generated": {
+         "var": "sass/save.scss",
+         "src": "sass/save"
+      },
+      "etc": [
+         "sass/etc/all.scss"
+      ],
+      "var": [
+         "sass/var/all.scss",
+         "sass/var"
+      ],
+      "src": [
+         "sass/src"
+      ]
+   },
+   "js": [
+      {
+         "path": "${framework.dir}/build/ext-all-rtl-debug.js"
+      },
+      {
+         "path": "resources/StatusgridEvents.js",
+         "includeInBundle": true
+      },
+      {
+         "path": "app.js",
+         "bundle": true
+      }
+   ],
+   "css": [
+      {
+         "path": "${build.out.css.path}/EventLog-all.css",
+         "bootstrap": true,
+         "bundle": true,
+         "exclude": [
+            "fashion"
+         ]
+      },
+      {
+         "path": "resources/main.css"
+      }
+   ],
+   "loader": {
+      "cache": true,
+      "cacheParam": "_dc"
+   },
+   "production": {
+      "output": {
+         "appCache": {
+            "enable": true,
+            "path": "cache.appcache"
+         }
+      },
+      "loader": {
+         "cache": "${build.timestamp}"
+      },
+      "cache": {
+         "enable": true
+      },
+      "compressor": {
+         "type": "yui"
+      }
+   },
+   "testing": {},
+   "development": {
+      "watch": {
+         "delay": 250
+      }
+   },
+   "bootstrap": {
+      "base": "${app.dir}",
+      "microloader": "bootstrap.js",
+      "css": "bootstrap.css",
+      "manifest": "${build.id}.json"
+   },
+   "output": {
+      "base": "${workspace.build.dir}/${build.environment}/${app.name}",
+      "page": "./index.html",
+      "manifest": "../${build.id}.json",
+      "appCache": {
+         "enable": false
+      }
+   },
+   "cache": {
+      "enable": false,
+      "deltas": true
+   },
+   "appCache": {
+      "cache": [
+         "index.html"
+      ],
+      "network": [
+         "*"
+      ],
+      "fallback": []
+   },
+   "resources": [
+      {
+         "path": "resources",
+         "output": "shared"
+      },
+      "resources/main.css"
+   ],
+   "archivePath": "archive",
+   "slicer": {
+      "js": [
+         {
+            "path": "sass/example/custom.js",
+            "isWidgetManifest": true
+         }
+      ],
+      "output": {
+         "appCache": {
+            "enable": false
+         }
+      },
+      "cache": {
+         "enable": false
+      }
+   },
+   "ignore": [
+      "(^|/)CVS(/?$|/.*?$)"
+   ],
+   "id": "a1e9e5c4-3fba-41d8-8ebe-f19749c96919"
+}

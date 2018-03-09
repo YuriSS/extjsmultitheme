@@ -1,0 +1,78 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Eventlog",
+            "Color"
+        ],
+        "name": "EventLog",
+        "stores": [
+            "Eventlog",
+            "RefreshTime",
+            "ClassFilter",
+            "StateTypeFilter",
+            "Colors"
+        ],
+        "views": [
+            "index.gridview",
+            "filter.eventlog"
+        ]
+    },
+    "configAlternates": {
+        "name": "string",
+        "views": "typedarray",
+        "models": "typedarray",
+        "stores": "typedarray"
+    },
+    "name": "Application",
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "Ext.Loader",
+            "reference": {
+                "name": "loader",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "paths": [
+                    "{",
+                    "    \"optools\": \"../packages/local/optools/src\"",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "paths": "object"
+            },
+            "name": "Loader11",
+            "designerId": "e77ab25c-e1ea-4851-9cb9-53b4d2a85a61"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "if (parent && parent.setPageTitle) {",
+                    "    parent.setPageTitle('');",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "launch",
+            "designerId": "3cb1b7fb-249d-4103-b68d-19d112f2f363"
+        }
+    ]
+}

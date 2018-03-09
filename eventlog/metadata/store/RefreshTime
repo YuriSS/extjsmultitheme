@@ -1,0 +1,41 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "data": [
+            "[",
+            "    {",
+            "        label: \"{{Disabled}}\",",
+            "        time: Infinity",
+            "    },",
+            "    {",
+            "        label: \"10 \".concat(\"{{seconds}}\"),",
+            "        time: 10000",
+            "    },",
+            "    {",
+            "        label: \"30 \".concat(\"{{seconds}}\"),",
+            "        time: 30000",
+            "    },",
+            "    {",
+            "        label: \"60 \".concat(\"{{seconds}}\"),",
+            "        time: 60000",
+            "    }",
+            "]"
+        ],
+        "designer|userClassName": "RefreshTime",
+        "storeId": "RefreshTime"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "data": "array",
+        "designer|userClassName": "string",
+        "storeId": "string"
+    },
+    "name": "MyStore",
+    "designerId": "a178c529-de75-40f5-bc92-d918e1fc87ee"
+}

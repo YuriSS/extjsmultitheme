@@ -1,0 +1,26 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "    {label: \"HARD\", id: \"HARD\"},",
+            "    {label: \"SOFT\", id: \"SOFT\"},",
+            "    {label: \"STARTED\", id: \"STARTED\"},",
+            "    {label: \"STOPPED\", id: \"STOPPED\"}",
+            "]"
+        ],
+        "designer|userClassName": "StateTypeFilter",
+        "storeId": "StateTypeFilter"
+    },
+    "configAlternates": {
+        "data": "array",
+        "designer|userClassName": "string",
+        "storeId": "string"
+    },
+    "designerId": "4b0fe5c1-b67f-41a4-b68f-17c882aa8acc"
+}

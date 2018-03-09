@@ -1,0 +1,18 @@
+
+.display_status {
+    margin-bottom: 5px;
+}
+
+.display_status .x-form-cb-label-default.x-form-cb-label-after {
+    padding-left: 0!important;
+    margin: 3px 0 0 22px;
+    width: 140px;
+    text-align: center;
+    color: #FFF;
+    padding: 5px;
+}
+
+.x-grid-td {
+    position: relative;
+    vertical-align: middle;
+}

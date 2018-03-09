@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/statusgrid/!svn/ver/1320/trunk/templates/eventlog/app/view/filter
+END
+eventlogViewModel.js
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/statusgrid/!svn/ver/1306/trunk/templates/eventlog/app/view/filter/eventlogViewModel.js
+END
+eventlogViewController.js
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/statusgrid/!svn/ver/1306/trunk/templates/eventlog/app/view/filter/eventlogViewController.js
+END
+eventlog.js
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/statusgrid/!svn/ver/1322/trunk/templates/eventlog/app/view/filter/eventlog.js
+END

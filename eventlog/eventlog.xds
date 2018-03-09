@@ -1,0 +1,65 @@
+{
+    "name": "eventlog",
+    "settings": {
+        "cmd": {
+            "license": "commercial",
+            "cmdVersion": "6.5.3.6",
+            "frameworkVersion": "6.5.3.57"
+        },
+        "urlPrefixTemplate": "http://localhost:{port}/{path}",
+        "urlPrefix": "http://localhost:44909/",
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true
+    },
+    "xdsVersion": "4.2.3",
+    "xdsBuild": 371,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext65",
+    "viewOrderMap": {
+        "view": [
+            "c90f791e-c885-4dc4-b69d-c2b306702347",
+            "374bca4f-8601-4abc-ba8a-799a194c70dc",
+            "0d883646-c9ad-438a-913d-325ff65a6299",
+            "1bc3c4e6-9288-497b-9c4f-3313a4743008",
+            "f40ec352-c313-4ffc-a2c6-6946bcd9f7ef",
+            "091edd5b-da62-4456-964e-a54aab0802f4"
+        ],
+        "store": [
+            "3d31fa7a-884d-41bc-abe4-48a2f45f32e2",
+            "a178c529-de75-40f5-bc92-d918e1fc87ee",
+            "b8cefefc-4ad7-4858-b2b5-2a30a9a76d0f",
+            "4b0fe5c1-b67f-41a4-b68f-17c882aa8acc",
+            "b8b56128-8122-47e1-a499-2117b64bfaa3"
+        ],
+        "controller": [],
+        "model": [
+            "24c837f9-8906-496d-a5a8-ff62ca5486bf",
+            "7a7b6231-7aab-45f2-a925-39b5b51a565d"
+        ],
+        "resource": [
+            "aecc99c0-0f49-4e80-8543-87bfc24b517a",
+            "85466813-ac07-45e5-95f8-a57c89b883a3",
+            "7f4f51b0-b2d0-443b-a8e7-a87de1d77c46",
+            "65984a55-ebb1-424a-bcc7-1bb0a81a80d1",
+            "dfb0af23-1fc6-40a2-a699-c4453f059068"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/statusgrid/!svn/ver/1321/trunk/templates/eventlog/metadata/view
+END
+index.gridviewViewModel
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/statusgrid/!svn/ver/1302/trunk/templates/eventlog/metadata/view/index.gridviewViewModel
+END
+filter.eventlogViewModel
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/statusgrid/!svn/ver/1306/trunk/templates/eventlog/metadata/view/filter.eventlogViewModel
+END
+indexViewModel
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/statusgrid/!svn/ver/1312/trunk/templates/eventlog/metadata/view/indexViewModel
+END
+index.gridviewViewController
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/statusgrid/!svn/ver/1302/trunk/templates/eventlog/metadata/view/index.gridviewViewController
+END
+filter.eventlogViewController
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/statusgrid/!svn/ver/1306/trunk/templates/eventlog/metadata/view/filter.eventlogViewController
+END
+index.gridview
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/statusgrid/!svn/ver/1321/trunk/templates/eventlog/metadata/view/index.gridview
+END
+indexViewController
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/statusgrid/!svn/ver/1316/trunk/templates/eventlog/metadata/view/indexViewController
+END
+filter.eventlog
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/statusgrid/!svn/ver/1322/trunk/templates/eventlog/metadata/view/filter.eventlog
+END
+index
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/statusgrid/!svn/ver/1300/trunk/templates/eventlog/metadata/view/index
+END

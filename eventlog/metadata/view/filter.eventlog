@@ -1,0 +1,1145 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "container|pack": "end",
+        "designer|extend": "Ext.window.Window",
+        "designer|uiInterfaceName": "opred",
+        "designer|userAlias": "eventlog",
+        "designer|userClassName": "filter.eventlog",
+        "height": 580,
+        "itemId": "filterPanel",
+        "layout": "vbox",
+        "ui": "opred",
+        "width": 900
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "title": "string",
+        "titleAlign": "string",
+        "width": "auto",
+        "closable": "boolean",
+        "container|align": "string",
+        "container|pack": "string",
+        "designer|uiInterfaceName": "string",
+        "layout": "string",
+        "designer|extend": "string",
+        "header": "boolean",
+        "closeAction": "string",
+        "itemId": "string",
+        "ui": "string"
+    },
+    "designerId": "1bc3c4e6-9288-497b-9c4f-3313a4743008",
+    "viewControllerInstanceId": "091edd5b-da62-4456-964e-a54aab0802f4",
+    "viewModelInstanceId": "f40ec352-c313-4ffc-a2c6-6946bcd9f7ef",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "itemId": "filterFormContainer",
+                "layout": "hbox",
+                "layout|flex": 7
+            },
+            "configAlternates": {
+                "container|align": "string",
+                "layout": "string",
+                "layout|flex": "number",
+                "itemId": "string"
+            },
+            "name": "MyContainer4",
+            "designerId": "e0ff5424-b273-4b61-8a85-8cae1fca7cd5",
+            "cn": [
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 2,
+                        "margin": 10
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number",
+                        "margin": "auto"
+                    },
+                    "name": "MyContainer3",
+                    "designerId": "134de074-7098-4744-8b60-ae32a2dfe249",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Date",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "bind": [
+                                    "{",
+                                    "    values: \"{filter}\"",
+                                    "}"
+                                ],
+                                "designer|createAlias": "daterangepicker",
+                                "fieldLabel": "{{Period}}",
+                                "padding": "10 0 10 0"
+                            },
+                            "configAlternates": {
+                                "designer|createAlias": "string",
+                                "fieldLabel": "string",
+                                "padding": "auto",
+                                "bind": "object",
+                                "customEvents": "object"
+                            },
+                            "name": "MyDateField1",
+                            "designerId": "da20dd55-5471-4d07-8a32-b9cfb9eb2ca6",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "bind",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "bind": [
+                                    "{",
+                                    "    value: \"{filter.servicegroup_name}\"",
+                                    "}"
+                                ],
+                                "displayField": "display_name",
+                                "fieldLabel": "{{Servicegroup}}",
+                                "height": 80,
+                                "minChars": 1,
+                                "multiSelect": true,
+                                "name": "servicegroup_name",
+                                "padding": "10 0 10 0"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "padding": "auto",
+                                "bind": "object",
+                                "height": "auto",
+                                "minChars": "number",
+                                "name": "string",
+                                "displayField": "datafield",
+                                "multiSelect": "boolean"
+                            },
+                            "name": "MyComboBox3",
+                            "designerId": "7b3338f6-9d85-4557-bb9d-f2993b2b63d1",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "bind",
+                                    "type": "string"
+                                }
+                            ],
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onTextareafieldAfterRender2",
+                                        "implHandler": [
+                                            "this.controller.createComboStore(component, \"servicegroup_name\");"
+                                        ],
+                                        "name": "afterrender",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onTextareafieldAfterRender2",
+                                    "designerId": "f4991c48-84e0-4de5-883f-b8406c6efa03"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "anyMatch": true,
+                                "bind": [
+                                    "{",
+                                    "    value: \"{filter.state_type}\"",
+                                    "}"
+                                ],
+                                "displayField": "label",
+                                "fieldLabel": "{{State Type}}",
+                                "height": 80,
+                                "multiSelect": true,
+                                "name": "state_type",
+                                "padding": "10 0 10 0",
+                                "store": "StateTypeFilter",
+                                "valueField": "id"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "padding": "auto",
+                                "bind": "object",
+                                "name": "string",
+                                "anyMatch": "boolean",
+                                "displayField": "datafield",
+                                "height": "auto",
+                                "multiSelect": "boolean",
+                                "store": "store",
+                                "valueField": "datafield"
+                            },
+                            "name": "MyComboBox6",
+                            "designerId": "25d553be-b9a2-440a-b7b5-a3a5cd6455cc",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "bind",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.TextArea",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "bind": [
+                                    "{",
+                                    "    value: \"{filter.details}\"",
+                                    "}"
+                                ],
+                                "fieldLabel": "{{Details}}",
+                                "name": "details",
+                                "padding": "10 0 10 0"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "padding": "auto",
+                                "bind": "object",
+                                "name": "string"
+                            },
+                            "name": "MyTextArea2",
+                            "designerId": "f77adfaf-4f29-4464-8ab8-cecce2855b79",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "bind",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 2,
+                        "margin": 10
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number",
+                        "margin": "auto"
+                    },
+                    "name": "MyContainer1",
+                    "designerId": "387959b3-741c-4352-a148-c4dfd3a30eba",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "bind": [
+                                    "{",
+                                    "    value: \"{filter.class}\"",
+                                    "}"
+                                ],
+                                "displayField": "label",
+                                "fieldLabel": "{{Class}}",
+                                "forceSelection": true,
+                                "multiSelect": true,
+                                "name": "class",
+                                "padding": "10 0 10 0",
+                                "store": "ClassFilter",
+                                "valueField": "value"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "padding": "auto",
+                                "bind": "object",
+                                "displayField": "datafield",
+                                "forceSelection": "boolean",
+                                "multiSelect": "boolean",
+                                "name": "string",
+                                "store": "store",
+                                "valueField": "datafield"
+                            },
+                            "name": "MyComboBox",
+                            "designerId": "4af16d28-bc00-4bed-9d25-6fbc13d90d88",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "bind",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "bind": [
+                                    "{",
+                                    "    value: \"{filter.host_name}\"",
+                                    "}"
+                                ],
+                                "displayField": "display_name",
+                                "fieldLabel": "{{Host Name}}",
+                                "height": 80,
+                                "minChars": 1,
+                                "multiSelect": true,
+                                "name": "host_name",
+                                "padding": "10 0 10 0",
+                                "shrinkWrap": 3
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "padding": "auto",
+                                "bind": "object",
+                                "multiple": "boolean",
+                                "displayField": "datafield",
+                                "height": "auto",
+                                "minChars": "number",
+                                "multiSelect": "boolean",
+                                "shrinkWrap": "number",
+                                "name": "string"
+                            },
+                            "name": "MyComboBox2",
+                            "designerId": "8113c8ac-93d7-42d9-9e5a-092e1dfae1e9",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "bind",
+                                    "type": "string"
+                                },
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "multiple",
+                                    "type": "string"
+                                }
+                            ],
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onComboboxAfterRender",
+                                        "implHandler": [
+                                            "this.controller.createComboStore(component, \"host_name\");"
+                                        ],
+                                        "name": "afterrender",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onComboboxAfterRender",
+                                    "designerId": "2f507915-bbe5-47db-9804-8f06d06f1515"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "bind": [
+                                    "{",
+                                    "    value: \"{filter.hostgroup_name}\"",
+                                    "}"
+                                ],
+                                "displayField": "display_name",
+                                "fieldLabel": "{{Hostgroup}}",
+                                "height": 80,
+                                "minChars": 1,
+                                "multiSelect": true,
+                                "name": "hostgroup_name",
+                                "padding": "10 0 10 0"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "padding": "auto",
+                                "bind": "object",
+                                "height": "auto",
+                                "minChars": "number",
+                                "name": "string",
+                                "displayField": "datafield",
+                                "multiSelect": "boolean"
+                            },
+                            "name": "MyComboBox4",
+                            "designerId": "e43298aa-5137-4a2a-90ef-576cc6aace4d",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "bind",
+                                    "type": "string"
+                                }
+                            ],
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onTextareafieldAfterRender",
+                                        "implHandler": [
+                                            "this.controller.createComboStore(component, \"hostgroup_name\");"
+                                        ],
+                                        "name": "afterrender",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onTextareafieldAfterRender",
+                                    "designerId": "fb70267a-70e1-4331-a486-11090e08eff7"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "bind": [
+                                    "{",
+                                    "    value: \"{filter.service_description}\"",
+                                    "}"
+                                ],
+                                "displayField": "display_name",
+                                "fieldLabel": "{{Service Description}}",
+                                "height": 80,
+                                "minChars": 1,
+                                "multiSelect": true,
+                                "name": "service_description",
+                                "padding": "10 0 10 0"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "padding": "auto",
+                                "bind": "object",
+                                "height": "auto",
+                                "minChars": "number",
+                                "name": "string",
+                                "displayField": "datafield",
+                                "multiSelect": "boolean"
+                            },
+                            "name": "MyComboBox5",
+                            "designerId": "47fa2e39-65fa-4a1e-8dcb-3577f3d87229",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "bind",
+                                    "type": "string"
+                                }
+                            ],
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onTextareafieldAfterRender1",
+                                        "implHandler": [
+                                            "this.controller.createComboStore(component, \"service_description\");"
+                                        ],
+                                        "name": "afterrender",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onTextareafieldAfterRender1",
+                                    "designerId": "7e431927-6189-4a28-a1f1-c89dc8cf1612"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "layout": "vbox",
+                        "layout|flex": 1,
+                        "margin": 10
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "layout": "string",
+                        "layout|flex": "number",
+                        "margin": "auto"
+                    },
+                    "name": "MyContainer2",
+                    "designerId": "c6a141c0-0408-4f36-aa5d-118431156323",
+                    "cn": [
+                        {
+                            "type": "Ext.form.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "padding": "0 0 10 0",
+                                "style": "text-align: center;",
+                                "text": "{{Status}}",
+                                "width": "100%"
+                            },
+                            "configAlternates": {
+                                "padding": "auto",
+                                "style": "string",
+                                "text": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyLabel",
+                            "designerId": "016ea5da-dd5c-4004-84ff-2fc2f8c37b87"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "{{Select all}}",
+                                "fieldLabel": "Label",
+                                "hideLabel": true,
+                                "inputValue": "all",
+                                "name": "status",
+                                "width": "100%"
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "hideLabel": "boolean",
+                                "width": "auto",
+                                "inputValue": "string",
+                                "name": "string"
+                            },
+                            "name": "MyCheckbox",
+                            "designerId": "0e68e052-8a20-4823-b765-b08e34e77b68",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "checkbox",
+                                            "checked"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "Ext.ComponentQuery.query(\"#statusGroup\").forEach(function(el) {",
+                                            "    el.items.items.forEach(function(input) {",
+                                            "        input.setValue(checked);",
+                                            "    });",
+                                            "});"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "b19bf1a9-fbf6-4a28-8d1f-15fb942f1d23"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.CheckboxGroup",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "container|align": "stretch",
+                                "dock": "top",
+                                "itemId": "statusGroup",
+                                "layout": "vbox",
+                                "layout|flex": 1,
+                                "vertical": true
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "height": "auto",
+                                "itemId": "string",
+                                "layout|flex": "number",
+                                "width": "auto",
+                                "container|align": "string",
+                                "dock": "string",
+                                "formBind": "boolean",
+                                "layout": "string",
+                                "vertical": "boolean",
+                                "bind": "object"
+                            },
+                            "name": "MyCheckboxGroup1",
+                            "designerId": "3ae69d25-1eb8-4042-8d59-b015c52305e8",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "bind",
+                                    "type": "string"
+                                }
+                            ],
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "{{Ok}}",
+                                        "cls": [
+                                            "display_status d0"
+                                        ],
+                                        "hideLabel": true,
+                                        "inputValue": "0",
+                                        "name": "status",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "hideLabel": "boolean",
+                                        "width": "auto",
+                                        "inputValue": "string",
+                                        "name": "string",
+                                        "cls": "typedarray"
+                                    },
+                                    "name": "MyCheckbox1",
+                                    "designerId": "a6b9a643-aa45-41fa-9cd1-80f0533865e2"
+                                },
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "{{Scheduled downtime}}",
+                                        "cls": [
+                                            "display_status d1"
+                                        ],
+                                        "hideLabel": true,
+                                        "inputValue": "1",
+                                        "name": "status",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "hideLabel": "boolean",
+                                        "width": "auto",
+                                        "inputValue": "string",
+                                        "name": "string",
+                                        "cls": "typedarray"
+                                    },
+                                    "name": "MyCheckbox3",
+                                    "designerId": "7a56ca41-06e6-41ea-98f3-8535d6bdd681"
+                                },
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "{{Acknowledged}}",
+                                        "cls": [
+                                            "display_status d2"
+                                        ],
+                                        "hideLabel": true,
+                                        "inputValue": "2",
+                                        "name": "status",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "hideLabel": "boolean",
+                                        "width": "auto",
+                                        "inputValue": "string",
+                                        "name": "string",
+                                        "cls": "typedarray"
+                                    },
+                                    "name": "MyCheckbox4",
+                                    "designerId": "4470f573-ebec-4369-b67c-7c06f5de6a7e"
+                                },
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "{{Flapping}}",
+                                        "cls": [
+                                            "display_status d3"
+                                        ],
+                                        "hideLabel": true,
+                                        "inputValue": "3",
+                                        "name": "status",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "hideLabel": "boolean",
+                                        "width": "auto",
+                                        "inputValue": "string",
+                                        "name": "string",
+                                        "cls": "typedarray"
+                                    },
+                                    "name": "MyCheckbox6",
+                                    "designerId": "ff4bb104-1b04-4b79-9350-f3499f6bdb55"
+                                },
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "{{Warning}}",
+                                        "cls": [
+                                            "display_status d4"
+                                        ],
+                                        "hideLabel": true,
+                                        "inputValue": "4",
+                                        "name": "status",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "hideLabel": "boolean",
+                                        "width": "auto",
+                                        "inputValue": "string",
+                                        "name": "string",
+                                        "cls": "typedarray"
+                                    },
+                                    "name": "MyCheckbox2",
+                                    "designerId": "0ca9630a-b6b1-487c-96b0-b9e3b53510d1"
+                                },
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "{{Unknown}}",
+                                        "cls": [
+                                            "display_status d5"
+                                        ],
+                                        "hideLabel": true,
+                                        "inputValue": "5",
+                                        "name": "status",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "hideLabel": "boolean",
+                                        "width": "auto",
+                                        "inputValue": "string",
+                                        "name": "string",
+                                        "cls": "typedarray"
+                                    },
+                                    "name": "MyCheckbox5",
+                                    "designerId": "bef725e3-868f-4242-8dc3-df14edfe00b3"
+                                },
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "{{Critical}}",
+                                        "cls": [
+                                            "display_status d6"
+                                        ],
+                                        "hideLabel": true,
+                                        "inputValue": "6",
+                                        "name": "status",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "hideLabel": "boolean",
+                                        "width": "auto",
+                                        "inputValue": "string",
+                                        "name": "string",
+                                        "cls": "typedarray"
+                                    },
+                                    "name": "MyCheckbox8",
+                                    "designerId": "cd27c683-5c4a-43d3-99b0-cd119e461e06"
+                                },
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "{{Unreachable}}",
+                                        "cls": [
+                                            "display_status d7"
+                                        ],
+                                        "hideLabel": true,
+                                        "inputValue": "7",
+                                        "name": "status",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "hideLabel": "boolean",
+                                        "width": "auto",
+                                        "inputValue": "string",
+                                        "name": "string",
+                                        "cls": "typedarray"
+                                    },
+                                    "name": "MyCheckbox7",
+                                    "designerId": "06428e73-2ba0-4728-9de1-a33b6a59d57b"
+                                },
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "{{Down}}",
+                                        "cls": [
+                                            "display_status d8"
+                                        ],
+                                        "hideLabel": true,
+                                        "inputValue": "8",
+                                        "name": "status",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "hideLabel": "boolean",
+                                        "width": "auto",
+                                        "inputValue": "string",
+                                        "name": "string",
+                                        "cls": "typedarray"
+                                    },
+                                    "name": "MyCheckbox9",
+                                    "designerId": "63bb3ad5-0848-43bb-af53-1b27dc5f8aef"
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onStatusGroupAfterRender",
+                                        "implHandler": [
+                                            "var state = this.getViewModel().data.filter.state;",
+                                            "",
+                                            "var action = parent.zip(function(color, checkbox) {",
+                                            "    checkbox.el.dom.querySelector(\".x-form-cb-label-after\").style.backgroundColor = color.get(\"color\");",
+                                            "    if (state.some(function(s) { return s === checkbox.inputValue; })) {",
+                                            "        checkbox.setValue(true);",
+                                            "    }",
+                                            "});",
+                                            "",
+                                            "var colors = Ext.getStore(\"Colors\").data.items;",
+                                            "",
+                                            "var checkboxs = component.query(\"checkboxfield\");",
+                                            "",
+                                            "action(colors, checkboxs);"
+                                        ],
+                                        "name": "afterrender",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onStatusGroupAfterRender",
+                                    "designerId": "1e190d3e-fe03-4067-b1c4-807dac35c08e"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "middle",
+                "container|pack": "end",
+                "layout": "hbox",
+                "layout|flex": 1,
+                "padding": "0 30 0 0"
+            },
+            "configAlternates": {
+                "container|align": "string",
+                "container|pack": "string",
+                "layout": "string",
+                "layout|flex": "number",
+                "padding": "auto"
+            },
+            "name": "MyContainer5",
+            "designerId": "59009390-946b-4d0f-94fe-7d0a5bc81fe9",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "default-toolbar-small",
+                        "margin": "0 5 0 0",
+                        "text": "{{Cancel}}",
+                        "ui": "default-toolbar-small",
+                        "width": 85
+                    },
+                    "configAlternates": {
+                        "designer|uiInterfaceName": "string",
+                        "margin": "auto",
+                        "text": "string",
+                        "ui": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyButton",
+                    "designerId": "13aa8e77-ab5b-4e7b-ae29-9fc68a81eef7",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "Ext.ComponentQuery.query(\"#filterPanel\").forEach(function(panel) { panel.hide(); });"
+                                ]
+                            },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "fn": "string",
+                                "implHandler": "code"
+                            },
+                            "name": "handler",
+                            "designerId": "65b43c32-8d68-4f41-8b47-74d6c08baff8"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "default-small",
+                        "margin": "0 0 0 5",
+                        "text": "{{Ok}}",
+                        "ui": "default-small",
+                        "width": 85
+                    },
+                    "configAlternates": {
+                        "designer|uiInterfaceName": "string",
+                        "margin": "auto",
+                        "text": "string",
+                        "ui": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyButton1",
+                    "designerId": "15abdef3-ab2c-4b99-8d83-5a78b3fee885",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "function reduceEl(result, x) {",
+                                    "    if (x.items) {",
+                                    "        return result.concat(x.items.items.reduce(reduceEl, []));",
+                                    "    }",
+                                    "    return result.concat(",
+                                    "        (x.getValue && x.getValue() && x.getValue() !== \"\" && x.getValue().length > 0 && ({ name: x.name, value: x.getValue() }))",
+                                    "        || (x.getPickerValue && x.getPickerValue() && [",
+                                    "            { name: \"start_time\", value: ajustDate(x.getPickerValue().startDateTimeYmdHis) },",
+                                    "            { name: \"end_time\", value: ajustDate(x.getPickerValue().endDateTimeYmdHis) }",
+                                    "        ])",
+                                    "        || (x.name === \"status\") && x.getValue() && x.inputValue !== \"all\" && result.reduce(function(acc, res) {",
+                                    "            if (res.name !== \"state\") return acc;",
+                                    "            return ({ name: \"state\", value: res.value.concat(x.inputValue) });",
+                                    "        }, {name: \"state\", value: [x.inputValue]})",
+                                    "        || []",
+                                    "    );",
+                                    "}",
+                                    "",
+                                    "function ajustDate(x) {",
+                                    "    return Math.floor(new Date(x).getTime() / 1000);",
+                                    "}",
+                                    "",
+                                    "var values = Ext.ComponentQuery.query(\"#filterFormContainer\").reduce(reduceEl, [])",
+                                    "    .reduce(function(res, x) {",
+                                    "        var fresh = {};",
+                                    "        fresh[x.name] = x.value;",
+                                    "        return Ext.apply({}, fresh, res);",
+                                    "    }, {});",
+                                    "var gridview = Ext.ComponentQuery.query(\"#gridview\");",
+                                    "var filterpanel = Ext.ComponentQuery.query(\"#filterPanel\");",
+                                    "",
+                                    "var exec = parent.zip(function(grid, panel) {",
+                                    "    grid.getViewModel().set(\"filter\", values);",
+                                    "    grid.controller.loadData();",
+                                    "    panel.hide();",
+                                    "});",
+                                    "",
+                                    "exec(gridview, filterpanel);"
+                                ]
+                            },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "fn": "string",
+                                "implHandler": "code"
+                            },
+                            "name": "handler",
+                            "designerId": "6f300f91-39b9-41ac-b8d6-e3b535a4aff0"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

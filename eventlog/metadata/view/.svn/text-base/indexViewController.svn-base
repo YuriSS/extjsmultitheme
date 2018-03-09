@@ -1,0 +1,115 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "index",
+        "designer|userClassName": "indexViewController"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "0d883646-c9ad-438a-913d-325ff65a6299",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "loadData",
+                "implHandler": [
+                    "clearTimeout(this.requestTime);",
+                    "",
+                    "var store = Ext.getStore(\"Eventlog\");",
+                    "",
+                    "var filters = this.getFilters();",
+                    "",
+                    "store.getProxy().extraParams.filters = JSON.stringify(filters);",
+                    "store.reload();",
+                    "",
+                    "if (Number(this.getViewModel().data.refreshTime) === Infinity) {",
+                    "    return ;",
+                    "}",
+                    "",
+                    "this.requestTime = setTimeout(function() {",
+                    "",
+                    "    console.log(\"reload, wait for\", this.getViewModel().data.refreshTime / 1000 + \" seconds\");",
+                    "    this.loadData();",
+                    "",
+                    "}.bind(this), this.getViewModel().data.refreshTime);"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "loadData",
+            "designerId": "22378de5-ccd6-42b1-82e9-a1fc445beeee"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "getFilters",
+                "implHandler": [
+                    "var filterData = this.getViewModel().data.filter || {};",
+                    "",
+                    "return Object.keys(filterData).reduce(function(result, key) {",
+                    "    if (filterData[key] === null || filterData[key] === undefined || filterData[key].length === 0) {",
+                    "        return result;",
+                    "    }",
+                    "",
+                    "    var newFilter = {};",
+                    "    newFilter[key] = filterData[key];",
+                    "    return Ext.apply({}, result, newFilter);",
+                    "}, {});"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getFilters",
+            "designerId": "9dc52ad7-4699-4901-9025-bf915696fdc4"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "fn"
+                ],
+                "fn": "saveFilter",
+                "implHandler": [
+                    "var filters = this.getFilters();",
+                    "",
+                    "window.history.pushState(null, null, \"?filters=\".concat(JSON.stringify(filters)));",
+                    "",
+                    "fn();"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "saveFilter",
+            "designerId": "09f78fbc-b073-4a5a-b6df-04fc68f5ad76"
+        }
+    ]
+}

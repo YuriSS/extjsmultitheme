@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/statusgrid/!svn/ver/1314/trunk/templates/eventlog/metadata/store
+END
+Colors
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/statusgrid/!svn/ver/1314/trunk/templates/eventlog/metadata/store/Colors
+END
+Eventlog
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/statusgrid/!svn/ver/1306/trunk/templates/eventlog/metadata/store/Eventlog
+END
+StateTypeFilter
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/statusgrid/!svn/ver/1312/trunk/templates/eventlog/metadata/store/StateTypeFilter
+END
+ClassFilter
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/statusgrid/!svn/ver/1310/trunk/templates/eventlog/metadata/store/ClassFilter
+END
+RefreshTime
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/statusgrid/!svn/ver/1306/trunk/templates/eventlog/metadata/store/RefreshTime
+END

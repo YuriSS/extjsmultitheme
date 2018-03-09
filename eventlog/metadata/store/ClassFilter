@@ -1,0 +1,39 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "    {",
+            "        label: \"state\",",
+            "        value: \"1\"",
+            "    },",
+            "    {",
+            "        label: \"notification\",",
+            "        value: \"3\"",
+            "    },",
+            "    {",
+            "        label: \"passive\",",
+            "        value: \"4\"",
+            "    },",
+            "    {",
+            "        label: \"command\",",
+            "        value: \"5\"",
+            "    }",
+            "]"
+        ],
+        "designer|userClassName": "ClassFilter",
+        "storeId": "ClassFilter"
+    },
+    "configAlternates": {
+        "data": "array",
+        "designer|userClassName": "string",
+        "storeId": "string"
+    },
+    "name": "MyJsonStore",
+    "designerId": "b8cefefc-4ad7-4858-b2b5-2a30a9a76d0f"
+}

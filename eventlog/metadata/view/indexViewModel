@@ -1,0 +1,35 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "{",
+            "    filter: {",
+            "        start_time: Math.floor(createYestardayDate() / 1000),",
+            "        end_time: Math.floor(new Date().getTime() / 1000),",
+            "        servicegroup_name: null,",
+            "        state_type: null,",
+            "        details: null,",
+            "        class: null,",
+            "        host_name: null,",
+            "        hostgroup_name: null,",
+            "        service_description: null,",
+            "        state: []",
+            "    },",
+            "    refreshTime: 10000",
+            "}"
+        ],
+        "designer|userAlias": "index",
+        "designer|userClassName": "indexViewModel"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "data": "object"
+    },
+    "designerId": "374bca4f-8601-4abc-ba8a-799a194c70dc"
+}
